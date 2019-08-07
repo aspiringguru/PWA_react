@@ -1,0 +1,81 @@
+https://www.sitepoint.com/progressive-web-apps-a-crash-course/
+
+
+npm install -g lighthouse
+lighthouse https://sitepoint.com/
+
+npm install -g create-react-app
+create-react-app react-pwa
+
+yarn start
+#Starts the development server.
+
+yarn build
+#Bundles the app into static files for production.
+yarn test
+#Starts the test runner.
+
+##yarn eject
+#Removes this tool and copies build dependencies, configuration files and
+#scripts into the app directory. If you do this, you can’t go back!
+
+cd react-pwa/
+
+
+#https://material-ui.com/
+npm install material-ui --save
+
+#refer this git repo
+https://github.com/sitepoint-editors/reedit-react-pwa
+#copy app.js from repo to local repo.
+
+npm run build
+npm install -g serve
+cd build
+serve
+
+#check windows port allowed by firewall.
+control panel >
+    System & security >
+        windows defender firewall >
+            advanced settings >
+                inbound rules >
+                    widen screen to see 'local port'
+                        if not already, open, create rule to allow remote connection
+                            allow connection from all for ease of use{?}
+
+ipconfig to find local ip on local network
+open 192.168.1.x:5000 on mobile device.
+
+
+https://surge.sh/help/getting-started-with-surge
+npm install --global surge
+
+#cd to dir containing the build files created above.
+surge
+
+#enter email, choose password, nominate a directory,
+#    choose a subdomain under surge.sh
+pwa_demo_mt.surge.sh
+
+#the direct browser to the generated url
+
+#open a guest session in chrome (avoid problems with extensions etc)
+#top right corner icon left of triple vertical dots> 'open guest window'
+#open Chrome DevTools > Audits panel >  Perform an audit.(at bottom)
+
+
+npm install -g inline-source inline-source-cli
+
+#in build/index.html
+# find instances of href="/static/css/ and src="/static/js/
+<link inline href="/static/css/main.5c745aa1.css" rel="stylesheet">
+<script inline type="text/javascript" src="/static/js/main.c35c5a6e.js"></script>
+
+
+
+#add public/service-worker.js
+
+
+#create ssl and enable https via nginx
+https://www.digicert.com/csr-ssl-installation/nginx-openssl.htm#ssl_certificate_install
